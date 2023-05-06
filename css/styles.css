@@ -479,10 +479,6 @@ transition: background-color var(--animation-transition), box-shadow var(--anima
   gap: 24px;
 }
 
-/* Our team */
-
-
-
 
 
 /* Portfolio */
@@ -568,38 +564,5 @@ color: var(--cloud-color);
 }
 
 
-
-/* Subscribe */
-
-
-
-/* Modal */
-
-
-
 /* Checkbox */
-
-.custom-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  color: transparent;
-  transition: border-color var(--animation-transition), color var(--animation-transition);
-  cursor: pointer;
-}
-
-.checkbox-icon {
-  fill: currentColor;
-  transition: color var(--animation-transition);
-  
-}
-
-.checkbox:checked + .checkbox-wrapper > .custom-checkbox {
-  border-color: transparent;
-  color: var(--cts-color);
-}
 

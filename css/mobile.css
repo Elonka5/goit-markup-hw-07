@@ -6,7 +6,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 428px;
+  min-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -52,6 +52,9 @@
 }
 
 .burger-menu {
+  /* position: absolute;
+  top:10%;
+  left: 76%; */
   background-color: transparent;
   padding: 0;
   border: none;
@@ -463,6 +466,7 @@
 .modal-button:focus .modal-icon {
   fill: var(--primary-white-color);
 }
+
 .submit-button {
   display: block;
   min-width: 169px;
@@ -614,9 +618,12 @@ margin-bottom: 16px;
 
 .mobile-button {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   top: 20px;
   right: 25px;
-  border: none;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -624,6 +631,16 @@ margin-bottom: 16px;
   background-color: var(--accent-color);
   transition: background-color var(--animation-transition);
   cursor: pointer;
+}
+
+.mobile-button:hover,
+.mobile-button:focus {
+  background-color: var(--cts-color);
+}
+
+.mobile-button:hover .modal-icon,
+.mobile-button:focus .modal-icon {
+  fill: var(--primary-white-color);
 }
 
 .mobile-link,
@@ -659,6 +676,31 @@ color: #434455;
 .mobile-list .link{
   text-decoration: none;
 }
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  color: transparent;
+  transition: border-color var(--animation-transition), color var(--animation-transition);
+  cursor: pointer;
+}
+
+.checkbox-icon {
+  fill: currentColor;
+  transition: color var(--animation-transition);
+}
+
+.checkbox:checked + .checkbox-wrapper > .custom-checkbox {
+  border-color: transparent;
+  color: var(--cts-color);
+}
+
+
 
   
 @media screen and (min-width: 428px) {

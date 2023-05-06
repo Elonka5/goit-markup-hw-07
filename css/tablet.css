@@ -219,7 +219,8 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     width: 408px;
-    min-height: 584px;
+    height:80%;
+    /* min-height: 584px; */
     background-color: var(--primary-white-color);
     padding: 72px 24px;
     border-radius: 4px;
