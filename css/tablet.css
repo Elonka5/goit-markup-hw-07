@@ -28,6 +28,21 @@
     align-items: center;
   }
 
+  .item .link {
+    position: relative;
+  }
+  
+  .link-current::after {
+    display: block;
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+    background-color: var(--cts-color);
+    border-radius: 2px;
+  }
+
   .header-nav {
     display: flex;
     align-items: center;
@@ -75,6 +90,11 @@
   .adress-nav .item:not(:last-child) {
     margin-bottom: 15px;
   }
+  
+  .adress-nav .address:hover,
+.adress-nav .address:focus {
+  color: var(--cts-color);
+}
 
   .adress-nav .link,
   .address-items {
@@ -187,6 +207,11 @@
     padding-bottom: 100px;
     background-color: var(--title-text-color);
   }
+
+  .footer-social-media{
+    margin-bottom: 0;
+  }
+
   .subscribe-input {
     min-width: 264px;
     border-radius: 4px;
@@ -211,17 +236,16 @@
     width: 0;
   }
 
+
+
   /* Modal */
 
   .modal {
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: 408px;
+    width: 90%;
     height:80%;
     /* min-height: 584px; */
-    background-color: var(--primary-white-color);
     padding: 72px 24px;
     border-radius: 4px;
   }
@@ -233,16 +257,43 @@
   }
 
   .mob-menu.is-open {
-    opacity: 0;
+    display: none;
+    /* opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    pointer-events: none; */
   }
 
   .mob-menu.is-hidden {
-    opacity: 0;
+    display: none;
+    /* opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    pointer-events: none; */
   }
+
+  /* Portfolio */
+
+  .buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 72px;
+    gap:24px;
+  }
+
+  .portfolio-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  
+.portfolio-item {
+  width: calc((100% - 24px) / 2);
+}
+
+
+
+
 }
 
 @media screen and (min-width: 429px) {
@@ -251,7 +302,7 @@
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/hero@tablet1x.jpg");
+      url('../images/hero@tablet1x.jpg');
   }
 
   @media (min-device-pixel-ratio: 2),
